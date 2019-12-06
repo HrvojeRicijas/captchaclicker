@@ -18,8 +18,8 @@ class CreateGamesTable extends Migration
             $table->timestamps();
             $table->unsignedBigInteger('user_id');
             $table->unsignedBigInteger('value');
-            $table->text('autos');
-            $table->text('upgrades');
+            $table->text('autos')->nullable();
+            $table->text('upgrades')->nullable();
 
             $table->foreign('user_id')->references('id')->on('users')->onDelete('cascade');
         });

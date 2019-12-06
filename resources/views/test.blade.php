@@ -1,8 +1,2 @@
-<?php
-$data = ['jan'=>'jedan', 'dan' => 'dva', 'fran' => 'tri'];
-$aaa = ['jovan' => 'cetiri'];
-$data = $data + $aaa;
-dd($data);
-
-
-?>
+<a href="{{ route('home') }}">Test</a>
+{{ dd($user->roles) }}
