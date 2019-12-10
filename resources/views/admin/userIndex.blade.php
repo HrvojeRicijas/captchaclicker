@@ -30,6 +30,7 @@
             <hr>
         </div>
     @endforeach
+        <a href="/">Home</a>
 </div>
 
 </html>

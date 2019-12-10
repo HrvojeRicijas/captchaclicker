@@ -23,6 +23,7 @@
                 <input type="submit" id="submit" name="submit" value="submit">
             </form>
         </div>
+    <a href="/">Home</a>
         <hr>
 </div>
 

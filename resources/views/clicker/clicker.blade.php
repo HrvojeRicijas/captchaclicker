@@ -58,6 +58,13 @@
                 width: 70%;
             }
 
+            .gamebox{
+                height: inherit;
+                display: inherit;
+                flex-direction: row;
+                width: 100%
+            }
+
         </style>
     </head>
 
@@ -65,7 +72,7 @@
 
         <div style="height: 100%; display: inline-flex; width: 100%; flex-direction: column">
 
-            <div style="height: inherit; display: inherit; flex-direction: row; width: 100%">
+            <div class="gamebox">
 
                 <div class="clickbuttonbox">
                     <input type="button" value="0" id="clickbutton" onclick="clickevent()" style="flex: 1">

@@ -90,6 +90,13 @@
                     <a href="/newgame">New Game</a>
 
                     <a href="/M">Load Local Game</a>
+
+                    @auth()
+                        @if(\App\User::find(Auth::id())->game)
+                            <a href="/A">Load My Game</a>
+                        @endif
+                    @endauth
+
                     @auth()
                         @if(\App\User::find(Auth::id())->hasRole(['administrator', 'superadministrator']))
                             <a href="/admin/games">Games</a>
@@ -101,13 +108,6 @@
                             <a href="/admin/users">Users</a>
                         @endif
                     @endauth
-
-                    @auth()
-                        @if(\App\User::find(Auth::id())->game)
-                            <a href="/A">Load My Game</a>
-                        @endif
-                    @endauth
-
                 </div>
             </div>
         </div>

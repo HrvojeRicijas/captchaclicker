@@ -46,15 +46,19 @@ class GameController extends Controller
 
     public function saveEditGame($id, Request $request){
         $autos = $request->all();
+        $game = Game::find($id);
 //intVal($autos['auto'][0]);
 
         collect($autos['auto'])->each(function ($item, $key){
             global $autocode;
-            $autocode = $autocode.$key."=".$item."|";}
+            $autocode = $autocode."auto".$key."=".$item."|";}
         );
         global $autocode;
         $autocode=rtrim($autocode, "|");
-        dd(autocode);
+        $game->autos = $autocode;
+        $game->value = $autos['value'];
+        $game->save();
+        return redirect('/admin/games');
     }
 
 

@@ -1,7 +1,7 @@
 <html>
     <div>
         @foreach($games as $game)
-            User: <a href="/admin/games/{{$game->user->id}}"> {{$game->user->name}} </a>
+            User: <a href="/admin/games/{{$game->id}}"> {{$game->user->name}} </a>
             <br>
             Value:
             {{$game->value}}
@@ -12,5 +12,6 @@
             @endforeach
             <hr>
         @endforeach
+            <a href="/">Home</a>
     </div>
 </html>

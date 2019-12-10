@@ -14,5 +14,6 @@
                <input type="submit" value="Submit">
            </form>
        </div>
+       <a href="/">Home</a>
     </body>
 </html>
